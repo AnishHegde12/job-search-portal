@@ -1,8 +1,0 @@
-com\jobportal\dto\UserDTO.class
-com\jobportal\repository\UserRepository.class
-com\jobportal\dto\AccountType.class
-com\jobportal\JobPortalApplication.class
-com\jobportal\service\UserService.class
-com\jobportal\entity\User.class
-com\jobportal\api\UserAPI.class
-com\jobportal\service\UserServiceImpl.class
