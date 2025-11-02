@@ -1,5 +1,4 @@
-job-search-portal
-Job Search Platform | job-search-portal
+Job Search Platform 
 A comprehensive Job Search Platform built using Spring Boot, React, TypeScript, TailwindCSS, MongoDB, and JWT Authentication.
 This platform connects job seekers with recruiters, providing a seamless experience for searching, applying, and managing job opportunities.
 
