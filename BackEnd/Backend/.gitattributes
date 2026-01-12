@@ -1,0 +1,12 @@
+# Force consistent line endings
+* text=auto
+
+# Specifically handle common file types
+*.sh text eol=lf
+*.bat text eol=crlf
+*.java text
+*.ts text
+*.tsx text
+*.css text
+*.json text
+*.md text

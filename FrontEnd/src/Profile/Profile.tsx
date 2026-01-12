@@ -6,11 +6,13 @@ import { useState } from "react";
 import SelectInput from "./SelectInput";
 import fields from "../Data/Profile";
 import ExpInput from "./ExpInput";
+import CertiInput from "./CertiInput";
 
 const Profile = (props: any) => {
     const [edit, setEdit] = useState([false, false, false, false, false]);
     const select = fields;
-    const [addExp, setAddExp]= useState(false);
+    const [addExp, setAddExp] = useState(false);
+    const [addCerti, setAddCerti] = useState(false);
     const [skill, setSkill] = useState(props.skills)
     const handleEdit = (index: number) => {
         const newEdit = [...edit];
@@ -76,7 +78,7 @@ const Profile = (props: any) => {
         </div>
         <Divider mx="xs" my="xl" />
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-5 flex justify-between">Experience <div className="flex gap-2"><ActionIcon color="brightSun.4" size="lg" onClick={() => setAddExp(true)} variant="subtle"><IconPlus className="h-4/5 w-4/5"/></ActionIcon> <ActionIcon color="brightSun.4" size="lg" onClick={() => handleEdit(3)} variant="subtle">
+            <div className="text-2xl font-semibold mb-5 flex justify-between">Experience <div className="flex gap-2"><ActionIcon color="brightSun.4" size="lg" onClick={() => setAddExp(true)} variant="subtle"><IconPlus className="h-4/5 w-4/5" /></ActionIcon> <ActionIcon color="brightSun.4" size="lg" onClick={() => handleEdit(3)} variant="subtle">
                 {edit[3] ? <IconDeviceFloppy className="h-4/5 w-4/5" /> : <IconPencil className="h-4/5 w-4/5" />}
             </ActionIcon></div></div>
             <div className="flex flex-col gap-8">
@@ -85,19 +87,24 @@ const Profile = (props: any) => {
                         <ExpCard key={index} {...exp} edit={edit[3]} />
                     )
                 }
-                <ExpInput setEdit={setAddExp}/>
+                {addExp && <ExpInput add setEdit={setAddExp} />}
             </div>
         </div>
         <Divider mx="xs" my="xl" />
         <div className="px-3">
-            <div className="text-2xl font-semibold mb-5">Certifications <ActionIcon color="brightSun.4" size="lg" onClick={() => handleEdit(4)} variant="subtle">
-                {edit[4] ? <IconDeviceFloppy className="h-4/5 w-4/5" /> : <IconPencil className="h-4/5 w-4/5" />}
-            </ActionIcon></div>
+            <div className="text-2xl font-semibold mb-4 flex justify-between">Certifications
+                <div className="flex gap-2"><ActionIcon color="brightSun.4" size="lg" onClick={() => setAddCerti(true)}
+                    variant="subtle"><IconPlus className="h-4/5 w-4/5" /></ActionIcon> <ActionIcon color="brightSun.4" size="lg"
+                        onClick={() => handleEdit(4)} variant="subtle">{edit[4] ? <IconDeviceFloppy className="h-4/5 w-4/5" />
+                            : <IconPencil className="h-4/5 w-4/5" />} </ActionIcon></div></div>
             <div className="flex flex-col gap-8">
                 {
                     props.certifications.map((cert: any, index: any) =>
-                        <CertCard key={index} {...cert} />
+                        <CertCard key={index} edit={edit[4]} {...cert} />
                     )
+                }
+                {
+                   addCerti && <CertiInput setEdit={setAddCerti}/>
                 }
             </div>
         </div>

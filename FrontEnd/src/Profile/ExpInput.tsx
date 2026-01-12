@@ -11,7 +11,7 @@ const ExpInput = (props: any) => {
     const [endDate, setEndDate] = useState<string | null>(null);
     const [desc, setDesc] = useState(props.description);
     return <div className="flex flex-col gap-3">
-        <div className="text-lg font-semibold">Edit Experience</div>
+        <div className="text-lg font-semibold">{props.addExp?"Add":"Edit"} Experience</div>
         <div className="flex gap-10 [&>*]:w-1/2">
             <SelectInput {...select[0]} />
             <SelectInput {...select[1]} />
@@ -19,8 +19,8 @@ const ExpInput = (props: any) => {
         <SelectInput {...select[2]} />
         <Textarea withAsterisk label="Summary" value={desc} autosize minRows={3} placeholder="Enter Job Description" onChange={(event) => setDesc(event.currentTarget.value)} />
         <div className="flex gap-10 [&>*]:w-1/2">
-            <MonthPickerInput withAsterisk maxDate={endDate || new Date()} label="Start date" placeholder="Start date" value={startDate} onChange={setStartDate} />
-            <MonthPickerInput withAsterisk disabled={checked} minDate={startDate || undefined} maxDate={new Date()} label="End date" placeholder="End date" value={endDate} onChange={setEndDate} />
+            <MonthPickerInput withAsterisk maxDate={endDate || new Date()} label="Start date" placeholder="Pick date" value={startDate} onChange={setStartDate} />
+            <MonthPickerInput withAsterisk disabled={checked} minDate={startDate || undefined} maxDate={new Date()} label="End date" placeholder="Pick date" value={endDate} onChange={setEndDate} />
         </div>
         <Checkbox autoContrast label="Current Working" checked={checked} onChange={(event) => setChecked(event.currentTarget.checked)} />
         <div className="flex gap-2">
