@@ -1,4 +1,4 @@
-import { Avatar, Indicator} from '@mantine/core';
+import { Indicator} from '@mantine/core';
 import { IconAnchor} from '@tabler/icons-react';
 import { IconBell } from '@tabler/icons-react';
 import { IconSettings } from '@tabler/icons-react';

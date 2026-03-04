@@ -5,7 +5,7 @@ const SelectInput = (props: any) => {
         setData(props.options);
         setValue(props.value);
         setSearch(props.value);
-    }, [props.options])
+    }, [props.options, props.value])
     const combobox = useCombobox({
         onDropdownClose: () => combobox.resetSelectedOption(),
     });

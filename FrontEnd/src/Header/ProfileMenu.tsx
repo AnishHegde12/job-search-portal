@@ -1,8 +1,6 @@
 import { Menu, Avatar, Switch } from '@mantine/core';
 import {
     IconMessageCircle,
-    IconTrash,
-    IconArrowsLeftRight,
     IconUserCircle,
     IconFileText,
     IconMoon,

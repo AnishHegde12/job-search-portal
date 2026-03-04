@@ -1,4 +1,4 @@
-import { ActionIcon, Divider, TagsInput, Textarea, TextInput } from "@mantine/core";
+import { ActionIcon, Divider, TagsInput, Textarea } from "@mantine/core";
 import { IconBriefcase, IconDeviceFloppy, IconMapPin, IconPencil, IconPlus } from "@tabler/icons-react";
 import ExpCard from "./ExpCard";
 import CertCard from "./CertCard";

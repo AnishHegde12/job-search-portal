@@ -2,9 +2,9 @@ import { useState } from "react"
 import { changePassword, sendOtp, verifyOtp } from "../Services/UserService"
 import { Modal, TextInput, Button, PinInput, PasswordInput } from '@mantine/core';
 import { IconAt, IconLock } from "@tabler/icons-react";
-import { signupValidation } from "../Services/formValidation";
+import { signupValidation } from "../Services/FormValidation";
 import { errorNotification, successNotification } from "../Services/NotificationService";
-import { useInterval } from "@mantine/hooks/lib/use-interval/use-interval";
+import { useInterval } from "@mantine/hooks";
 
 const ResetPassword = (props: any) => {
 
