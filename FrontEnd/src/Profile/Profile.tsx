@@ -25,7 +25,7 @@ const Profile = (props: any) => {
             <img className="rounded-t-2xl" src="/Profile/banner.jpg" alt="" />
             <img className="w-48 h-48 rounded-full -bottom-1/3 absolute left-3 border-8 border-mine-shaft-950" src="/avatar1.png" alt="" />
         </div>
-        <div className="px-3 mt-16">
+        <div className="px-3 mt-24">
             <div className="text-3xl font-semibold flex justify-between">{props.name}
                 <ActionIcon color="brightSun.4" size="lg" onClick={() => handleEdit(0)} variant="subtle">
                     {edit[0] ? <IconDeviceFloppy className="h-4/5 w-4/5" /> : <IconPencil className="h-4/5 w-4/5" />}
